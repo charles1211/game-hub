@@ -1,13 +1,13 @@
-import UseGenre from '../hooks/useGenres';
+import UseGenres from '../hooks/useGenres';
 
 interface GenreListProps {}
 
 const GenreList = ({}: GenreListProps) => {
-  const { genres } = UseGenre();
+  const { data } = UseGenres();
 
   return (
     <ul>
-      {genres.map((genre) => (
+      {data.map((genre) => (
         <li key={genre.id}> {genre.name}</li>
       ))}
     </ul>
