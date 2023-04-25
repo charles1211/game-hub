@@ -4,9 +4,10 @@ import getCroppedImageUrl from '../services/image-url';
 
 interface GenreListProps {
   onSelectedGenre: (genre: Genre) => void;
+  selectedGenre: Genre | null;
 }
 
-const GenreList = ({ onSelectedGenre }: GenreListProps) => {
+const GenreList = ({ onSelectedGenre, selectedGenre }: GenreListProps) => {
   const { data, isloading, error } = UseGenres();
 
   if (error) return null;
@@ -22,7 +23,12 @@ const GenreList = ({ onSelectedGenre }: GenreListProps) => {
               borderRadius={8}
               src={getCroppedImageUrl(genre.image_background)}
             />
-            <Button onClick={() => onSelectedGenre(genre)} fontSize='lg' variant='link'>
+            <Button
+              fontWeight={genre.id === selectedGenre?.id ? 'bold' : 'normal'}
+              onClick={() => onSelectedGenre(genre)}
+              fontSize='lg'
+              variant='link'
+            >
               {genre.name}
             </Button>
           </HStack>
