@@ -8,10 +8,10 @@ interface GenreListProps {
 }
 
 const GenreList = ({ onSelectedGenre, selectedGenre }: GenreListProps) => {
-  const { data, isloading, error } = UseGenres();
+  const { data, isLoading, error } = UseGenres();
 
   if (error) return null;
-  if (isloading) return <Spinner />;
+  if (isLoading) return <Spinner />;
 
   return (
     <>
