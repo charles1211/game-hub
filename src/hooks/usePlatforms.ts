@@ -3,7 +3,7 @@ import { Fetchresponse } from '../services/api-client';
 import apiClient from '../services/api-client';
 import platforms from '../data/platforms';
 
-interface platForm {
+export interface platForm {
   id: number;
   name: string;
   slug: string;
