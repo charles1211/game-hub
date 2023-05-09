@@ -1,4 +1,4 @@
-import { Card, CardBody, HStack, Heading, Image, Text } from '@chakra-ui/react';
+import { Box, Card, CardBody, HStack, Heading, Image, Text } from '@chakra-ui/react';
 import { Game } from '../hooks/useGames';
 import PlatformIconList from './PlatformIconList';
 import CriticScore from './CriticScore';
@@ -11,7 +11,7 @@ interface GameCardProps {
 
 const GameCard = ({ game }: GameCardProps) => {
   return (
-    <Card>
+    <Card cursor='pointer'>
       <Image src={getCroppedImageUrl(game.background_image)} />
       <CardBody>
         <HStack justifyContent='space-between' marginBottom={3}>
