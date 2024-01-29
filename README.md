@@ -1,5 +1,5 @@
 # Description
-> This website showcases various features and functionality implemented using React 18. It leverages the concepts taught in the React 18 for Beginners course by Code with Mosh to create a responsive and interactive user interface.
+This website showcases various features and functionality implemented using React 18. It leverages the concepts taught in the React 18 for Beginners course by Code with Mosh to create a responsive and interactive user interface.
 
 The frontend development of this website was guided by the React 18 for Beginners course by Code with Mosh. It covers topics such as setting up a React project, creating components, handling state and props, working with forms, and implementing routing.
 
